@@ -1,0 +1,492 @@
+/* App — Gold Reserve Institutional Layout */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 14, 20, 0.95);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-img {
+  height: 2.25rem;
+  width: auto;
+  display: block;
+}
+
+.logo-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.logo-ticker {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--gold-muted);
+  letter-spacing: 0.05em;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+.nav a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
+
+/* Hero */
+.hero {
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.hero-logo {
+  width: clamp(140px, 20vw, 200px);
+  height: auto;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+.hero-title {
+  margin-bottom: 0.25rem;
+}
+
+.hero-ticker {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem !important;
+}
+
+.hero-desc {
+  max-width: 560px;
+  margin: 0 auto 2rem !important;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.hero-cta {
+  margin-top: 0.5rem;
+}
+
+/* Vault Section */
+.vault-section {
+  background: var(--bg-secondary);
+}
+
+.vault-visual {
+  position: relative;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.vault-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.vault-stats-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(transparent, rgba(10, 14, 20, 0.92));
+  gap: 1rem;
+}
+
+.vault-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.vault-stat-value {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.vault-stat-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.vault-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.vault-spec {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.vault-spec-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.vault-spec-value {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  .vault-specs {
+    grid-template-columns: 1fr;
+  }
+  .vault-stats-overlay {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.metric-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.metric-value {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.metric-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Holdings */
+.holdings-cta {
+  margin-top: 2rem;
+}
+
+/* Inventory Section */
+.inventory-section {
+  background: var(--bg-secondary);
+}
+
+.inventory-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.inventory-image-wrap {
+  position: sticky;
+  top: 6rem;
+}
+
+.inventory-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+}
+
+.inventory-image-caption {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.inventory-summary {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.inventory-summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.inventory-summary-row span:last-child {
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .inventory-layout {
+    grid-template-columns: 1fr;
+  }
+  .inventory-image-wrap {
+    position: static;
+  }
+}
+
+/* Certificates */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cert-type {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+}
+
+.cert-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.cert-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.cert-link {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Monetary Policy Phases */
+.policy-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.policy-phase {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.phase-number {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--gold-subtle);
+  line-height: 1;
+}
+
+.phase-title {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+.phase-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  flex: 1;
+  margin: 0 !important;
+}
+
+.phase-status {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+}
+
+@media (max-width: 900px) {
+  .policy-timeline {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--bg-secondary);
+}
+
+.cta-inner {
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.cta-title {
+  margin-bottom: 0.75rem;
+}
+
+.cta-desc {
+  max-width: 480px;
+  margin: 0 auto 2rem !important;
+  color: var(--text-secondary);
+}
+
+.hero-links {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hero-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--gold);
+  border: 1px solid var(--gold-border);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.hero-social:hover {
+  color: var(--bg-primary);
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.hero-social svg {
+  flex-shrink: 0;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  padding: 3rem 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.footer-disclaimer {
+  max-width: 640px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 !important;
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0 !important;
+}
+
+.footer-entertainment {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  opacity: 0.8;
+  margin: 0 !important;
+}
