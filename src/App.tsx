@@ -1,5 +1,7 @@
 import './App.css'
 
+const TOKEN_CA = '72fw6ZSqSN2whwjajHgb6LuukttFrqsV1XSPdaBopump'
+
 function App() {
   return (
     <div className="app">
@@ -39,7 +41,7 @@ function App() {
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 Twitter
               </a>
-              <a href="#" className="hero-social" aria-label="Chart">
+              <a href={`https://dexscreener.com/solana/${TOKEN_CA}`} target="_blank" rel="noopener noreferrer" className="hero-social" aria-label="Chart">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3 3v18h18v-2H5V3H3zm16 4h-2v9h2V7zM13 5v14h2V5h-2zm-4 4v10h2V9H9z"/></svg>
                 Chart
               </a>
@@ -369,6 +371,9 @@ function App() {
             <span className="logo-name">Gold Reserve</span>
             <span className="logo-ticker">$AURM</span>
           </div>
+          <p className="footer-ca">
+            Contract: <code>{TOKEN_CA}</code>
+          </p>
           <p className="footer-disclaimer">
             This site is for informational purposes. Gold Reserve ($AURM) is a digital asset backed by allocated physical gold. 
             Past attestations do not guarantee future reserve adequacy. Consult professional advice before any investment.

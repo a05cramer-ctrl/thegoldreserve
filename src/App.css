@@ -470,6 +470,18 @@
   gap: 0.5rem;
 }
 
+.footer-ca {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0 !important;
+}
+
+.footer-ca code {
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: var(--gold-muted);
+}
+
 .footer-disclaimer {
   max-width: 640px;
   font-size: 0.8rem;
